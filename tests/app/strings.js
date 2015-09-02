@@ -4,14 +4,14 @@ if ( typeof window === 'undefined' ) {
 }
 
 describe('strings', function() {
-  it('you should be able to reduce duplicate characters to a desired minimum', function() {
+  xit('you should be able to reduce duplicate characters to a desired minimum', function() {
     expect(stringsAnswers.reduceString('aaaabbbb', 2)).to.eql('aabb');
     expect(stringsAnswers.reduceString('xaaabbbb', 2)).to.eql('xaabb');
     expect(stringsAnswers.reduceString('aaaabbbb', 1)).to.eql('ab');
     expect(stringsAnswers.reduceString('aaxxxaabbbb', 2)).to.eql('aaxxaabb');
   });
 
-  it('you should be able to wrap lines at a given number of columns, without breaking words', function() {
+  xit('you should be able to wrap lines at a given number of columns, without breaking words', function() {
     var wrapCol = 5;
     var inputStrings = [
       'abcdef abcde abc def',
@@ -31,7 +31,7 @@ describe('strings', function() {
     });
   });
 
-  it('you should be able to reverse a string', function() {
+  xit('you should be able to reverse a string', function() {
     var inputStrings = [
       'abc',
       'i am a string of characters',
