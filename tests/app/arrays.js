@@ -27,7 +27,7 @@ describe('arrays', function() {
     expect(result.join(' ')).to.eql('1 3 4');
   });
 
-  xit('you should be able to remove all instances of a value from an array, returning the original array', function() {
+  it('you should be able to remove all instances of a value from an array, returning the original array', function() {
     a.splice( 1, 0, 2 );
     a.push( 2 );
     a.push( 2 );
@@ -41,35 +41,35 @@ describe('arrays', function() {
     expect(result).equal(a);
   });
 
-  xit('you should be able to add an item to the end of an array', function() {
+  it('you should be able to add an item to the end of an array', function() {
     var result = arraysAnswers.append(a, 10);
 
     expect(result).to.have.length(5);
     expect(result[result.length - 1]).to.eql(10);
   });
 
-  xit('you should be able to remove the last item of an array', function() {
+  it('you should be able to remove the last item of an array', function() {
     var result = arraysAnswers.truncate(a);
 
     expect(result).to.have.length(3);
     expect(result.join(' ')).to.eql('1 2 3');
   });
 
-  xit('you should be able to add an item to the beginning of an array', function () {
+  it('you should be able to add an item to the beginning of an array', function () {
     var result = arraysAnswers.prepend(a, 10);
 
     expect(result).to.have.length(5);
     expect(result[0]).to.eql(10);
   });
 
-  xit('you should be able to remove the first item of an array', function () {
+  it('you should be able to remove the first item of an array', function () {
     var result = arraysAnswers.curtail(a);
 
     expect(result).to.have.length(3);
     expect(result.join(' ')).to.eql('2 3 4');
   });
 
-  xit('you should be able to join together two arrays', function() {
+  it('you should be able to join together two arrays', function() {
     var c = [ 'a', 'b', 'c', 1 ];
     var result = arraysAnswers.concat(a, c);
 
@@ -77,20 +77,20 @@ describe('arrays', function() {
     expect(result.join(' ')).to.eql('1 2 3 4 a b c 1');
   });
 
-  xit('you should be able to add an item anywhere in an array', function() {
+  it('you should be able to add an item anywhere in an array', function() {
     var result = arraysAnswers.insert(a, 'z', 2);
 
     expect(result).to.have.length(5);
     expect(result.join(' ')).to.eql('1 2 z 3 4');
   });
 
-  xit('you should be able to count the occurences of an item in an array', function() {
+  it('you should be able to count the occurences of an item in an array', function() {
     var result = arraysAnswers.count([ 1, 2, 4, 4, 3, 4, 3 ], 4);
 
     expect(result).to.eql(3);
   });
 
-  xit('you should be able to find duplicates in an array', function() {
+  it('you should be able to find duplicates in an array', function() {
     var result = arraysAnswers.duplicates([ 1, 2, 4, 4, 3, 3, 1, 5, 3 ]);
 
     expect(result.sort()).to.eql([1, 3, 4]);
