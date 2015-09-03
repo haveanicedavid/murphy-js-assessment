@@ -75,22 +75,30 @@ exports.arraysAnswers = {
 
   duplicates : function(arr) {
     // var unique = _.uniq(arr);
-    var i, unique = [], result = [];
+    var i, unique = [], duplicates = [];
     for (i = 0; i < arr.length; i++) {
       if (unique.indexOf(arr[i]) < 0) {
         unique.push(arr[i]);
       } else {
-        result.push(arr[i]);
+        duplicates.push(arr[i]);
       }
     }
-    return _.uniq(result);
+    return _.uniq(duplicates);
   },
 
   square : function(arr) {
-
+    return arr.map(function(x) {
+      return x * x;
+    });
   },
 
   findAllOccurrences : function(arr, target) {
-
+    var i, indexes = [];
+    for (i = 0; i < arr.length; i++ ) {
+      if (arr[i] === target) {
+        indexes.push(i);
+      }
+    }
+    return indexes;
   }
 };
