@@ -51,13 +51,13 @@ describe('functions', function() {
     }
   });
 
-  xit('you should be able to create a "partial" function', function() {
+  it('you should be able to create a "partial" function', function() {
     var partial = functionsAnswers.partial(sayIt, 'Hello', 'Ellie');
     expect(partial('!!!')).to.eql('Hello, Ellie!!!');
     expect(sayItCalled).to.be.ok;
   });
 
-  xit('you should be able to use arguments', function () {
+  it('you should be able to use arguments', function () {
     var a = Math.random();
     var b = Math.random();
     var c = Math.random();
@@ -69,7 +69,7 @@ describe('functions', function() {
     expect(functionsAnswers.useArguments(a, b, c, d)).to.eql(a + b + c + d);
   });
 
-  xit('you should be able to apply functions with arbitrary numbers of arguments', function () {
+  it('you should be able to apply functions with arbitrary numbers of arguments', function () {
     (function () {
       var a = Math.random();
       var b = Math.random();
@@ -102,7 +102,7 @@ describe('functions', function() {
     }());
   });
 
-  xit('you should be able to create a "partial" function for variable number of applied arguments', function () {
+  it('you should be able to create a "partial" function for variable number of applied arguments', function () {
     var partialMe = function (x, y, z) {
       return x / y * z;
     };
@@ -116,7 +116,7 @@ describe('functions', function() {
     expect(functionsAnswers.partialUsingArguments(partialMe, a, b, c)()).to.eql(partialMe(a, b, c));
   });
 
-  xit('you should be able to curry existing functions', function () {
+  it('you should be able to curry existing functions', function () {
     var curryMe = function (x, y, z) {
       return x / y * z;
     };

@@ -41,22 +41,30 @@ exports.functionsAnswers = {
   },
 
   partial : function(fn, str1, str2) {
-
+    return function(callback) {
+      return fn.call(null, str1, str2, callback);
+    };
   },
 
   useArguments : function() {
-
+    var args = Array.prototype.slice.call(arguments);
+    return _.reduce(args, function(sum, x) {return sum + x; });
   },
 
   callIt : function(fn) {
-
+    var args = Array.prototype.slice.call(arguments, 1, arguments.length);
+    return fn.apply(null, args);
   },
 
   partialUsingArguments : function(fn) {
-
+    var args = Array.prototype.slice.call(arguments, 1, arguments.length);
+    return function() {
+      var callbackArgs = args.concat(Array.prototype.slice.call(arguments));
+      return fn.apply(null, callbackArgs);
+    };
   },
 
   curryIt : function(fn) {
-
+    
   }
 };
