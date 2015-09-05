@@ -29,12 +29,12 @@ describe('objects and context', function() {
     };
   });
 
-  xit('you should be able to alter the context in which a method runs', function() {
+  it('you should be able to alter the context in which a method runs', function() {
       // define a function for fn so that the following will pass
     expect(objectsAnswers.alterContext(a.sayIt, b)).to.eql('Yo, Rebecca!');
   });
 
-  xit('you should be able to alter multiple objects at once', function() {
+  it('you should be able to alter multiple objects at once', function() {
     // define a function for fn so that the following will pass
     var obj1 = new C('Rebecca');
     var obj2 = new C('Melissa');
@@ -47,7 +47,7 @@ describe('objects and context', function() {
     expect(new C('Ellie').greeting).to.eql(greeting);
   });
 
-  xit('you should be able to iterate over an object\'s "own" properties', function() {
+  it('you should be able to iterate over an object\'s "own" properties', function() {
     // define a function for fn so that the following will pass
     var C = function() {
       this.foo = 'bar';
