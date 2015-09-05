@@ -4,7 +4,7 @@ if ( typeof window === 'undefined' ) {
 }
 
 describe('strings', function() {
-  xit('you should be able to reduce duplicate characters to a desired minimum', function() {
+  it('you should be able to reduce duplicate characters to a desired minimum', function() {
     expect(stringsAnswers.reduceString('aaaabbbb', 2)).to.eql('aabb');
     expect(stringsAnswers.reduceString('xaaabbbb', 2)).to.eql('xaabb');
     expect(stringsAnswers.reduceString('aaaabbbb', 1)).to.eql('ab');
