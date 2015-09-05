@@ -4,7 +4,7 @@ if ( typeof window === 'undefined' ) {
 }
 
 describe('logical operators', function(){
-  xit('you should be able to work with logical or', function() {
+  it('you should be able to work with logical or', function() {
     expect(logicalOperatorsAnswers.or(false, true)).to.be.ok;
     expect(logicalOperatorsAnswers.or(true, false)).to.be.ok;
     expect(logicalOperatorsAnswers.or(true, true)).to.be.ok;
@@ -12,7 +12,7 @@ describe('logical operators', function(){
     expect(logicalOperatorsAnswers.or(3, 4)).to.not.eq(7);
   });
 
-  xit('you should be able to work with logical and', function() {
+  it('you should be able to work with logical and', function() {
     expect(logicalOperatorsAnswers.and(false, true)).not.to.be.ok;
     expect(logicalOperatorsAnswers.and(false, false)).not.to.be.ok;
     expect(logicalOperatorsAnswers.and(true, false)).not.to.be.ok;

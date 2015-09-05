@@ -29,6 +29,7 @@
     "afterEach",
     "it",
     "xit",
+    ".ok",
     "arraysAnswers",
     "asyncAnswers",
     "bestPracticesAnswers",
