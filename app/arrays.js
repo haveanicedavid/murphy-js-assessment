@@ -138,6 +138,9 @@ exports.arraysAnswers = {
   duplicates : function(arr) {
     var numbers = {};
     var dupes = [];
+    function function_name (argument) {
+      // body...
+    }
 
     for (var i = 0; i < arr.length; i++ ) {
       if (numbers.hasOwnProperty(arr[i])) {
@@ -149,10 +152,9 @@ exports.arraysAnswers = {
 
     for (var item in numbers) {
       if (numbers[item] > 1) {
-        dupes.push(item);
+        dupes.push(parseInt(item));
       }
     }
-
     return dupes;
   },
 
@@ -164,5 +166,43 @@ exports.arraysAnswers = {
   },
 
   findAllOccurrences : function(arr, target) {
+    // var indexes = [];
+    // // Solution 1
+    // arr.forEach(function(item, index) {
+    //   if (item === target) {
+    //     indexes.push(index);
+    //   }
+    // });
+    // return indexes;
+
+    // Solution 2
+    // for (var i = 0; i < arr.length; i++) {
+    //   if (arr[i] === target) {
+    //     indexes.push(i);
+    //   }
+    // }
+    // return indexes;
+
+    // Solution 3
+    var indexes =  _.map(arr, function(x, index) {
+      if (x === target) {
+        return index;
+      }
+    });
+
+    for (var i = 0; i < indexes.length; i ++ ) {
+      if (indexes[i] === 'undefined') {
+        indexes.splice(i, 1);
+        i--;
+      }
+    }
+
+    return indexes;
+    // return arr.map(function(x, index) {
+    //   if (x === target) {
+    //     return index;
+    //   }
+    // });
+
   }
 };

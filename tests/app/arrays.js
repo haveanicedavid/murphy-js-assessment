@@ -103,7 +103,7 @@ describe('arrays', function() {
     expect(result.join(' ')).to.eql('1 4 9 16');
   });
 
-  xit('you should be able to find all occurrences of an item in an array', function() {
+  it('you should be able to find all occurrences of an item in an array', function() {
     var result = arraysAnswers.findAllOccurrences('abcdefabc'.split(''), 'a');
 
     expect(result.sort().join(' ')).to.eql('0 6');

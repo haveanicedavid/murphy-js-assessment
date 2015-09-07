@@ -27,6 +27,7 @@
     "describe",
     "beforeEach",
     "afterEach",
+    "_",
     "it",
     "xit",
     ".ok",
